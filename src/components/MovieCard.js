@@ -19,8 +19,8 @@ function MovieCard({ movie }) {
         <img
           src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
           alt={movie.title}
-          className="hover:opacity-80 transition-opacity duration-300 "
-          style={{ maxHeight: '270px', maxWidth:'300px'  }}
+          className="hover:opacity-80 transition-opacity duration-300 rounded-lg shadow-md "
+          //style={{ maxHeight: '270px', maxWidth:'300px'  }}
         />
         <h2 className="text-lg font-semibold mt-2">{movie.title}</h2>
         </Link>
