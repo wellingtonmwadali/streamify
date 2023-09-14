@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieCard from '../components/MovieCard';
 import SearchBar from '../components/SearchBar';
+import Footer from '../components/Footer';
 
 function Homepage() {
   const [featuredMovie, setFeaturedMovie] = useState(null);
@@ -101,6 +102,7 @@ function Homepage() {
           ))}
         </div>
       )}
+      <Footer/>
     </div>
   );
 }
