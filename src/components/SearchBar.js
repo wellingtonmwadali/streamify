@@ -6,7 +6,7 @@ import {BiMovie} from 'react-icons/bi'
 function SearchBar({ onSearchResults }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
-
+//handle search queries from api
   const handleSearch = async () => {
     try {
       setLoading(true);
@@ -21,7 +21,7 @@ function SearchBar({ onSearchResults }) {
       setLoading(false);
     }
   };
-
+//handle header layout
   return (
     
     <div className ="lg:flex justify-between lg:px-4 py-2 ">

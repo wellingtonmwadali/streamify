@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
-
+//social media icons
 function Footer() {
   return (
     <footer className="bg-white text-black py-6">

@@ -12,7 +12,7 @@ function MovieCard({ movie }) {
     // Show an alert message when the heart icon is clicked
     toast(isFavorite ? 'Removed from favorites' : 'Added to favorites');
   };
-
+//fetch movie with details- title, rating, release date
   return (
     <div className="bg-white lg:px-5 lg:py-5" data-testid="movie-card">
       <Link to={`/movies/${movie.id}`}>

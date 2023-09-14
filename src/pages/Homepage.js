@@ -15,6 +15,7 @@ function Homepage() {
   };
 
   useEffect(() => {
+    //background back drop pic
     const fetchFeaturedMovie = async () => {
       try {
         const apiKey = '4fcdd94c5f3104840d062de0e3501eee';
@@ -26,6 +27,7 @@ function Homepage() {
         console.error('Error fetching featured movie:', error);
       }
     };
+     //featured movies
     const fetchTopMovies = async () => {
       try {
         const apiKey = '4fcdd94c5f3104840d062de0e3501eee';
@@ -92,6 +94,7 @@ function Homepage() {
           </div>
         </div>
       )}
+      {/**featured movie grid system */}
       <h1 className='font-bold lg:px-4'>Featured Movies</h1>
       {loading ? (
         <div className='text-center'>Loading...</div>
@@ -102,6 +105,7 @@ function Homepage() {
           ))}
         </div>
       )}
+      {/**Homepage Footer */}
       <Footer/>
     </div>
   );
