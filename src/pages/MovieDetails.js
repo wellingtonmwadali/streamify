@@ -39,20 +39,25 @@ function MovieDetails() {
 
     {/* Movie Details */}
     <div className='text-black text-center'>
-    <h1 className="text-3xl font-semibold my-4">{movie.title}</h1>
-    <p className="text-sm">Release Date: {movie.release_date}</p>
-    <p className="text-sm font-bold">Runtime: {movie.runtime} minutes</p>
-    <div className='flex items-center justify-center'>
-    <p className="text-sm my-4 font-medium lg:w-1/2 bg-slate-300 rounded-md">{movie.overview}</p>
-    </div>
-    
+      <h1 className="text-3xl font-semibold my-4" data-testid="movie-title">
+        {movie.title}
+      </h1>
+      <p className="text-sm" data-testid="movie-release-date">
+        Release Date: {movie.release_date}
+      </p>
+      <p className="text-sm font-bold" data-testid="movie-runtime">
+        Runtime: {movie.runtime} minutes
+      </p>
+      <div className='flex items-center justify-center'>
+        <p className="text-sm my-4 font-medium lg:w-1/2 bg-slate-300 rounded-md" data-testid="movie-overview">
+          {movie.overview}
+        </p>
+      </div>
     </div>
    
   </div>
     </div>
-   
-  
-);
+  );
 }
 
 export default MovieDetails;
