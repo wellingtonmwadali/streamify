@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Sidebar from '../components/sidebar';
+import { useParams } from 'react-router-dom';
+import Sidebar from '../components/Sidebar';
 
-function MovieDetails({ match }) {
-  const { id } = match.params;
+function MovieDetails() {
+  const { id } = useParams();
   const [movie, setMovie] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -26,20 +27,34 @@ function MovieDetails({ match }) {
   }, [id]);
 
   return (
+    <div className='flex'>
+       <Sidebar/>
+    {/* Movie Backdrop Image */}
     <div>
-      <h1 className="text-2xl font-semibold">{movie.title}</h1>
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        <div>
-          <p>Release Date: {movie.release_date}</p>
-          <p>Runtime: {movie.runtime} minutes</p>
-          <p>{movie.overview}</p>
-        </div>
-      )}
-      <Sidebar />
+    <img
+      src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} 
+      alt={movie.title}
+      className="shadow-md rounded-md h-96 mx-auto"
+    />
+
+    {/* Movie Details */}
+    <div className='text-black text-center'>
+    <h1 className="text-3xl font-semibold my-4">{movie.title}</h1>
+    <p className="text-sm">Release Date: {movie.release_date}</p>
+    <p className="text-sm font-bold">Runtime: {movie.runtime} minutes</p>
+    <div className='flex items-center justify-center'>
+    <p className="text-sm my-4 font-medium lg:w-1/2 bg-slate-300 rounded-md">{movie.overview}</p>
     </div>
-  );
+    
+    </div>
+   
+  </div>
+    </div>
+   
+  
+);
 }
 
 export default MovieDetails;
+
+

@@ -25,7 +25,7 @@ function MovieCard({ movie }) {
         <h2 className="text-lg font-semibold mt-2">{movie.title}</h2>
         </Link>
         <p className="text-sm text-gray-500 flex"><span className='text-xl'><FaImdb/></span>{movie.release_date}</p>
-        <div className='flex gap-12'>
+        <div className='flex justify-between'>
         <p className="text-sm"> Rating: {movie.vote_average} / 10</p>
         <div className="cursor-pointer" onClick={toggleFavorite}>
           <FaHeart

@@ -58,9 +58,9 @@ function Homepage() {
               <div className="lg:p-4">
                 <p className="text-lg font-semibold text-white">{featuredMovie.title}</p>
                 <p className="text-sm text-gray-300 mb-4">Release Date: {featuredMovie.release_date}</p>
-                <div className="w-1/4">
+                <div className="lg:w-1/4 sm-w-1/2">
                 <p className="text-lg font-semibold text-white">Overview</p>
-                <p className="text-sm text-gray-300">{featuredMovie.overview}</p>
+                <p className=" text-gray-300">{featuredMovie.overview}</p>
                 </div>
               </div>
             </div>

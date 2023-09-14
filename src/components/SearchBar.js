@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import {AiOutlineMenu} from 'react-icons/ai'
+import {BiMovie} from 'react-icons/bi'
 
 function SearchBar({ onSearchResults }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,11 +23,18 @@ function SearchBar({ onSearchResults }) {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    
+    <div className ="lg:flex justify-between lg:px-4 py-2 ">
+      <div className='flex lg:gap-3 sm:gap-1'>
+      <div className=' font-bold text-white text-xl'>MovieBox</div>
+      <BiMovie className='text-3xl  bg-pink-500 rounded-full'/>
+      </div>
+    
+     <div className="">
       <input
         type="text"
         placeholder="Search for movies..."
-        className="bg-transparent px-4 py-2 rounded-l-md focus:outline-none border border-gray-300 w-64 text-white"
+        className="bg-transparent px-4 py-2 rounded-md focus:outline-none border border-gray-300 lg:w-64 text-white"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
@@ -36,6 +45,14 @@ function SearchBar({ onSearchResults }) {
       >
         {loading ? 'Searching...' : 'Search'}
       </button>
+    </div>
+    <div className='flex gap-1'>
+    <div className='text-white font-bold text-sm '>Signin</div>
+    <AiOutlineMenu 
+    className='bg-pink-500 text-xl p-1 rounded-full'/>
+    </div>
+   
+   
     </div>
   );
 }
