@@ -29,7 +29,7 @@ function MovieDetails() {
   return (
     <div className='flex'>
        <Sidebar/>
-    {/* Movie Backdrop Image */}
+    {/* Movie Backdrop Image banner*/}
     <div>
     <img
       src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} 
