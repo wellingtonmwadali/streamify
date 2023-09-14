@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar';
 function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [setLoading] = useState(true);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
