@@ -97,7 +97,7 @@ function Homepage() {
       {/**featured movie grid system */}
       <h1 className='font-bold lg:px-4'>Featured Movies</h1>
       {loading ? (
-        <div className='text-center'>Loading...</div>
+        <div className='text-center font-bold text-2xl'>Loading...</div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
           {movies.map((movie) => (
